@@ -5,20 +5,20 @@
 class Timediff < Formula
   desc ""
   homepage "https://github.com/tunaitis/homebrew-tools"
-  version "0.1.3"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tunaitis/timediff/releases/download/v0.1.3/timediff_Darwin_arm64.tar.gz"
-      sha256 "6b282cdff87c85842374dc51ece4cec0ccf63976cc2d32cd900f18b9cbe7ef55"
+      url "https://github.com/tunaitis/timediff/releases/download/v0.2.0/timediff_Darwin_arm64.tar.gz"
+      sha256 "d1c6c98f906ff979ebc715d34fbbdc3b5affb7f6d7e406b7f16af42418bbc6ce"
 
       def install
         bin.install "timediff"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tunaitis/timediff/releases/download/v0.1.3/timediff_Darwin_x86_64.tar.gz"
-      sha256 "ec8e45277bef440ab2b8db59f8142e4357a05f8780b8b437fcfef3895577b4ba"
+      url "https://github.com/tunaitis/timediff/releases/download/v0.2.0/timediff_Darwin_x86_64.tar.gz"
+      sha256 "08d9b045d3f7fe6182d73aa745519b9ba3cdca780b8766c8a914ddff9fda4688"
 
       def install
         bin.install "timediff"
@@ -27,17 +27,17 @@ class Timediff < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/tunaitis/timediff/releases/download/v0.1.3/timediff_Linux_x86_64.tar.gz"
-      sha256 "97aaa3c4def074d79fb7ad70147daabcebbd887f8cea30d97f0de9ab8fd84e2f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tunaitis/timediff/releases/download/v0.2.0/timediff_Linux_arm64.tar.gz"
+      sha256 "7c5f4cf9d96908db531646d4622b5a581297c8c3282d48d722d26ff38f3d147d"
 
       def install
         bin.install "timediff"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tunaitis/timediff/releases/download/v0.1.3/timediff_Linux_arm64.tar.gz"
-      sha256 "2258d65a78a5d314e89e2eab2200d9ecc5f3349cdbf10fc11369ce6fb8e392de"
+    if Hardware::CPU.intel?
+      url "https://github.com/tunaitis/timediff/releases/download/v0.2.0/timediff_Linux_x86_64.tar.gz"
+      sha256 "291841579a4694af1f932b02f828d73621bb719766038b7de014a188fb144a81"
 
       def install
         bin.install "timediff"
