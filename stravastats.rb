@@ -5,20 +5,20 @@
 class Stravastats < Formula
   desc ""
   homepage "https://github.com/tunaitis/homebrew-tools"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.1/stravastats_Darwin_arm64.tar.gz"
-      sha256 "98e2fc8e2cb9703d2a483d9a8918b7044ac8e9b3dd64de04f5572294378ef368"
+      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.2/stravastats_Darwin_arm64.tar.gz"
+      sha256 "15d144cbdcd6520970516a57d30e73440a7ae610d48e79744600652413b47774"
 
       def install
         bin.install "stravastats"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.1/stravastats_Darwin_x86_64.tar.gz"
-      sha256 "07f56abf93c7d44b694efdb8c1b05e9a1d3d1a879881ea92425c1ff8422aa1c1"
+      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.2/stravastats_Darwin_x86_64.tar.gz"
+      sha256 "4c0ad7463f94fcdf1250af941e11f8349d9733e35220942aa831a2a38d017f8f"
 
       def install
         bin.install "stravastats"
@@ -28,16 +28,16 @@ class Stravastats < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.1/stravastats_Linux_arm64.tar.gz"
-      sha256 "2d92ef968a67877f9619e6ea36ac0dc6d6b42de61b8715e5a943bbfff551ff2b"
+      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.2/stravastats_Linux_arm64.tar.gz"
+      sha256 "71cecbbf4805da0bad478712dcba0a5e42fde01dd252135f46c49297befd5d49"
 
       def install
         bin.install "stravastats"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.1/stravastats_Linux_x86_64.tar.gz"
-      sha256 "65e2f1d9f9288e956ee86866128500751d35e95ac07890e1f750b1770ad73a89"
+      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.2/stravastats_Linux_x86_64.tar.gz"
+      sha256 "95b1721ce304008f79d1b9986f8f31fcfe497e6463cc9f9896828dc1e6836488"
 
       def install
         bin.install "stravastats"
