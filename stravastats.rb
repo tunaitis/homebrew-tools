@@ -5,20 +5,20 @@
 class Stravastats < Formula
   desc ""
   homepage "https://github.com/tunaitis/homebrew-tools"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.3/stravastats_Darwin_arm64.tar.gz"
-      sha256 "f2fff193925aeb6aa485c60f1afb5398bd5fff21e76f06d8e55cb1ca02224081"
+      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.4/stravastats_Darwin_arm64.tar.gz"
+      sha256 "f2efad867c216ed060d0790723068e71a68a9f49d1393a24ef4f1e1951ab7d7d"
 
       def install
         bin.install "stravastats"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.3/stravastats_Darwin_x86_64.tar.gz"
-      sha256 "ab83c2fbc8b47b8f0d2471c3729efdf9574cd26748d06413eab65e5e3f717873"
+      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.4/stravastats_Darwin_x86_64.tar.gz"
+      sha256 "1396c05d8959beb059b72bb5d301785f0feb14eb2eb3a64aa9c1cf74a8dbae85"
 
       def install
         bin.install "stravastats"
@@ -27,17 +27,17 @@ class Stravastats < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.3/stravastats_Linux_arm64.tar.gz"
-      sha256 "b36ea7f87e1e081cda13942a928843551f3e009e5fe8cbcff89e88f47b22999f"
+    if Hardware::CPU.intel?
+      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.4/stravastats_Linux_x86_64.tar.gz"
+      sha256 "642a674e125a76729c56f97f980539430d9e0395729b3b7dd61726a7a74e2c9a"
 
       def install
         bin.install "stravastats"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.3/stravastats_Linux_x86_64.tar.gz"
-      sha256 "ea47dcc9d1092ddb8fc065a3d0e77447ebe88e8ad086d3a88a27c6e4d40897d2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tunaitis/stravastats/releases/download/v0.1.4/stravastats_Linux_arm64.tar.gz"
+      sha256 "1a64463a9b796e6f621c69eb7981005886e971c1907647277787b8a26f037478"
 
       def install
         bin.install "stravastats"
